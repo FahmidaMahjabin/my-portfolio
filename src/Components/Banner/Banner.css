@@ -1,0 +1,60 @@
+.propic{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+
+}
+.banner{
+    background-color: rgb(85, 90, 95);
+    padding: 30px;
+    
+}
+.staticText{
+    font-size: 40px;
+    line-height: 90px;
+    color: aliceblue;
+    
+}
+.dynamicText{
+    overflow: hidden;
+    height: 90px;
+    line-height: 90px;
+    margin-left: 15px;
+}
+.dynamicText li{
+    text-decoration: none;
+    color: rgb(255, 77, 0);
+    position: relative;
+    font-size: 40px;
+    top: 0;
+    
+    animation: slide 12s steps(5) infinite;
+}
+.dynamicText li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(85, 90, 95);
+    border-left: 5px solid rgb(255, 77, 0);
+    
+    animation: typing 5s steps(24) infinite;
+
+}
+@keyframes typing {
+    40%,
+    60%{
+       left: calc(100%);
+    }
+    100%{
+        left: 0
+    }
+    
+}
+@keyframes slide {
+    100%{
+        top: -450px;
+    }
+    
+}
